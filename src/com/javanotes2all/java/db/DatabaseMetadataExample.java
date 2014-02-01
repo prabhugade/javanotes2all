@@ -9,9 +9,9 @@ import java.sql.SQLException;
 public class DatabaseMetadataExample {
 
 	private static final String DRIVER = "com.mysql.jdbc.Driver";
-    private static final String URL = "jdbc:mysql://localhost/test";
+    private static final String URL = "jdbc:mysql://localhost/test2";
     private static final String USERNAME = "root";
-    private static final String PASSWORD = "";
+    private static final String PASSWORD = "silica";
     
     public static void main(String[] args) throws Exception {
         Connection connection = null;
@@ -34,7 +34,8 @@ public class DatabaseMetadataExample {
 	} catch (SQLException e) {
 	    e.printStackTrace();
 	} finally {
-	    connection.close();
+		if(connection!=null)
+			connection.close();
 	}
     }
 
