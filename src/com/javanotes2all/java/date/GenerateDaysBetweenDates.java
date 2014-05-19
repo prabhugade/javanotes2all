@@ -17,7 +17,7 @@ public class GenerateDaysBetweenDates
 	}
 	public static void main(String[] args) 
 	{
-		System.out.println(new GenerateDaysBetweenDates().getBetweenDates("2013-12-01", "2013-12-15", "yyyy-MM-dd"));
+		System.out.println(new GenerateDaysBetweenDates().getBetweenDates("2013-12-01", "2013-12-01", "yyyy-MM-dd"));
 	}
 	public ArrayList<String> getBetweenDates(String fromdate,String todate,String format)
 	{
