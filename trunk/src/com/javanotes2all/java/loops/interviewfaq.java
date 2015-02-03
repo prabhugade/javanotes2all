@@ -52,6 +52,9 @@ public class interviewfaq {
 		}
 		System.out.println(tempvalue);
 		
+		System.out.println("math value for -ve============================");
+		int value=-9;
+		System.out.println(Math.sqrt(value));
 		
 	}
 }
