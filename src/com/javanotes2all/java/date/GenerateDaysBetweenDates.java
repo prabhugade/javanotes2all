@@ -17,7 +17,12 @@ public class GenerateDaysBetweenDates
 	}
 	public static void main(String[] args) 
 	{
-		System.out.println(new GenerateDaysBetweenDates().getBetweenDates("2013-12-01", "2013-12-01", "yyyy-MM-dd"));
+		System.out.println(new GenerateDaysBetweenDates().getBetweenDates("2013-12-01", "2013-12-02", "yyyy-MM-dd"));
+		System.out.println("=================================");
+		System.out.println(new GenerateDaysBetweenDates().compareTwoDates("2013-12-01", "2013-12-02", "yyyy-MM-dd"));
+		System.out.println(new GenerateDaysBetweenDates().compareTwoDates("2013-12-01", "2013-12-01", "yyyy-MM-dd"));
+		System.out.println(new GenerateDaysBetweenDates().compareTwoDates("2013-12-05", "2013-12-01", "yyyy-MM-dd"));
+		
 	}
 	public ArrayList<String> getBetweenDates(String fromdate,String todate,String format)
 	{
@@ -59,5 +64,16 @@ public class GenerateDaysBetweenDates
 			e.printStackTrace();
 		}
 		return resultdate;
+	}
+	public int compareTwoDates(String fromdate,String todate,String format)
+	{
+		int p=0;
+		try 
+		{
+			p=todate.compareToIgnoreCase(fromdate);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return p;
 	}
 }
